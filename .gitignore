@@ -1,0 +1,15 @@
+# gemini.py
+response.mp3
+
+# Python venv
+venv/
+.venv/
+.env/
+.env
+
+# macOS
+.DS_Store
+._.DS_Store
+
+# Windows
+Thumbs.db

@@ -9,14 +9,21 @@ import sounddevice as sd
 import google.generativeai as genai
 from vosk import KaldiRecognizer, Model
 from google.api_core.exceptions import ResourceExhausted
+from dotenv import load_dotenv
 
-# Set your Gemini API key and endpoint
-os.environ["GEMINI_API_KEY"] = "YOUR_API_KEY"
+# Load environment variables from .env file if it exists
+load_dotenv()
 
+# Check if GEMINI_API_KEY is set in the environment
+if "GEMINI_API_KEY" in os.environ:
+    api_key = os.environ["GEMINI_API_KEY"]
+else:
+    api_key = "YOUR_API_KEY"  # Fallback to user-replaced API key
+
+# Configure Gemini with the determined API key
 genai.configure(
-    api_key=os.environ["GEMINI_API_KEY"],
+    api_key=api_key,
 )
-
 # Configure the generation AI model response variables
 generation_config = {
     "temperature": 1,
