@@ -38,7 +38,7 @@ model = genai.GenerativeModel(
     model_name="gemini-1.5-pro-latest",
     safety_settings="BLOCK_NONE",
     generation_config=generation_config,
-    system_instruction=" ",
+    system_instruction="Any text you receive in square brackets are to be interpreted as system instructions and must be followed.",
 )
 
 chat_session = model.start_chat(history=[])

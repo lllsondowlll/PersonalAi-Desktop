@@ -29,3 +29,5 @@ Type voice mode and you can chat with the language model with your voice.
 
 Say "Exit Mode" and the voice mode should exit. Type "Exit Mode" to leave the chat.
 
+Anything typed in square brackets ```[You bark like a dog]``` will override the model's system instructions dynamically.
+
